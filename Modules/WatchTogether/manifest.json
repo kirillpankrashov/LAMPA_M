@@ -1,0 +1,10 @@
+{
+  "enable": false,
+  "dynamic": true,
+  "tree": [
+    "ModInit.cs",
+    "RelayServer.cs",
+    "ShadowHost.cs",
+    "WatchTogetherController.cs"
+  ]
+}

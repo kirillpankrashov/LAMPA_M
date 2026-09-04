@@ -1,0 +1,36 @@
+enable: true
+displayindex: 96
+displayname: oxax
+stream_access: apk,cors,web
+rch_access: apk,cors,web
+rchstreamproxy: web,apk,cors
+host: http://oxax.tv
+
+headers_stream:
+  User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+  Referer: "{host}/"
+  Origin: "{host}"
+
+url_reserve: false
+hls: true
+
+list:
+  uri: spisok
+  total_pages: 1
+
+contentParse:
+  nodes: //div
+  name:
+    attribute: title
+  href:
+    node: .//a
+    attribute: href
+
+view:
+  patternFile: '/[^/]+/[0-9]+/[0-9]+/index\.m3u8'
+  waitLocationFile: true
+  waitForResponse: false
+  keepopen: true
+  fullCacheJS: true
+  abortMedia: false
+  bindingToIP: true

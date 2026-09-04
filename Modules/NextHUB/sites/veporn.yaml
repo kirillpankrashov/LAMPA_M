@@ -1,0 +1,99 @@
+enable: true
+displayindex: 220
+displayname: Veporn
+rch_access: apk,cors
+stream_access: apk,cors
+rchstreamproxy: web
+host: https://veporn.com
+priorityBrowser: http
+
+menu:
+  route:
+    sort: "{host}/videos?page={page}"
+    cat: "{host}/category/{cat}?page={page}"
+  categories:
+    Amateur: amateur
+    Anal: anal
+    Asian: asian
+    Babe: babe
+    BDSM: bdsm
+    Beach: beach
+    Big Ass: big-ass
+    Big Dick: big-dick
+    Big Tits: big-tits
+    Bisexual: bisexual
+    Blonde: blonde
+    Blowjob: blowjob
+    Bondage: bondage
+    Brunette: brunette
+    Cartoon: cartoon
+    Casting: casting
+    Creampie: creampie
+    Cumshot: cumshot
+    Deepthroat: deepthroat
+    Ebony: ebony
+    Fetish: fetish
+    Fingering: fingering
+    Fisting: fisting
+    Gangbang: gangbang
+    Group Sex: group-sex
+    Hairy: hairy
+    Handjob: handjob
+    Interracial: interracial
+    Japanese: japanese
+    Latina: latina
+    Lesbians: lesbians
+    Long Hair: long-hair
+    Massage: massage
+    Masturbation: masturbation
+    Mature: mature
+    Milf: milf
+    Moaning: moaning
+    Old And Young: old-and-young
+    Orgasm: orgasm
+    Orgy: orgy
+    Outdoor: outdoor
+    Pickup: pickup
+    Pov: pov
+    Public: public
+    Pussy Licking: pussy-licking
+    Redhead: redhead
+    Russian: russian
+    Sex Party: sex-party
+    Shaved Pussy: shaved-pussy
+    Shemales: shemales
+    Small Tits: small-tits
+    Squeezing Tits: squeezing-tits
+    Squirt: squirt
+    Stockings: stockings
+    Tattooed: tattooed
+    Teen: teen
+    Threesome: threesome
+    Uncategorized: uncategorized
+    Undressing: undressing
+    Uniforms: uniforms
+    Vibrator: vibrator
+
+list:
+  uri: videos?page={page}
+
+search:
+  uri: search?q={search}&page={page}
+
+contentParse:
+  nodes: //a[@class='group block']
+  name:
+    node: .//img
+    attribute: alt
+  href:
+    node: .
+    attribute: href
+  img:
+    node: .//img
+    attribute: src
+
+view:
+  related: true
+  viewsource: true
+  regexMatch:
+    pattern: '"contentUrl":"([^"]+\.mp4)"'
